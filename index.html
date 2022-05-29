@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solve Wordle - Optimal Guesses</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body id="doc-body">
+    <!-- The Modal info dialog box-->
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content" id="modalContent">
+        <span class="close">&times;</span>
+        <p>Help and info goes here.</p>
+        </div>
+    </div>
+
+    <div id="masthead"><h1 id="title">Wordle Solver</h1></div>
+    <div id="buttons">
+        <div id="div1">
+            <button class="btn" id="words-btn" onclick="wordsClicked(event)">NYT Words</button>
+        </div>
+        <div id="div2">
+            <button class="btn" id="reset-btn" onclick="resetClicked()">Reset</button>
+        </div>
+        <div id="div3">
+                <button class="btn" id="info-btn" onclick="infoClicked()">Info</button>
+        </div>
+    </div>
+    <div id="spacing"></div>
+    <div id="all-letter-tiles" onclick="letterTileClicked(event)">
+    <div class="word">
+        <button class="letter-tile" id="first-char"
+                data-word-num="0" data-char-num="0">A</button>
+        <button class="letter-tile"
+                data-word-num="0" data-char-num="1">B</button>
+        <button class="letter-tile"
+                data-word-num="0" data-char-num="2">C</button>
+        <button class="letter-tile"
+                data-word-num="0" data-char-num="3">D</button>
+        <button class="letter-tile" id="last-char"
+                data-word-num="0" data-char-num="4">E</button>
+    </div>
+    <div class="word">
+        <button class="letter-tile"
+                data-word-num="1" data-char-num="0">A</button>
+        <button class="letter-tile"
+                data-word-num="1" data-char-num="1">B</button>
+        <button class="letter-tile"
+                data-word-num="1" data-char-num="2">C</button>
+        <button class="letter-tile"
+                data-word-num="1" data-char-num="3">D</button>
+        <button class="letter-tile"
+                data-word-num="1" data-char-num="4">E</button>
+    </div>
+    <div class="word">
+        <button class="letter-tile"
+                data-word-num="2" data-char-num="0">A</button>
+        <button class="letter-tile"
+                data-word-num="2" data-char-num="1">B</button>
+        <button class="letter-tile"
+                data-word-num="2" data-char-num="2">C</button>
+        <button class="letter-tile"
+                data-word-num="2" data-char-num="3">D</button>
+        <button class="letter-tile"
+                data-word-num="2" data-char-num="4">E</button>
+    </div>
+    <div class="word">
+        <button class="letter-tile"
+                data-word-num="3" data-char-num="0">A</button>
+        <button class="letter-tile"
+                data-word-num="3" data-char-num="1">B</button>
+        <button class="letter-tile"
+                data-word-num="3" data-char-num="2">C</button>
+        <button class="letter-tile"
+                data-word-num="3" data-char-num="3">D</button>
+        <button class="letter-tile"
+                data-word-num="3" data-char-num="4">E</button>
+    </div>
+    <div class="word">
+        <button class="letter-tile"
+                data-word-num="4" data-char-num="0">A</button>
+        <button class="letter-tile"
+                data-word-num="4" data-char-num="1">B</button>
+        <button class="letter-tile"
+                data-word-num="4" data-char-num="2">C</button>
+        <button class="letter-tile"
+                data-word-num="4" data-char-num="3">D</button>
+        <button class="letter-tile"
+                data-word-num="4" data-char-num="4">E</button>
+    </div>
+    <div class="word">
+        <button class="letter-tile"
+                data-word-num="5" data-char-num="0">A</button>
+        <button class="letter-tile"
+                data-word-num="5" data-char-num="1">B</button>
+        <button class="letter-tile"
+                data-word-num="5" data-char-num="2">C</button>
+        <button class="letter-tile"
+                data-word-num="5" data-char-num="3">D</button>
+        <button class="letter-tile"
+                data-word-num="5" data-char-num="4">E</button>
+    </div>
+    </div>
+    <script src="app.js"></script>
+<noscript>You need to enable JavaScript to play the game.</noscript>
+</body>
+</html>
